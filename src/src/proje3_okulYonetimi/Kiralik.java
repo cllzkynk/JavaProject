@@ -1,10 +1,10 @@
 package src.proje3_okulYonetimi;
 
-public class Ogretmen extends Kisi {
+public class Kiralik extends Kisi {
     private String bolum;
     private String sicilNo;
 
-    public Ogretmen(String adSoyad, String kimlikNo, int yas, String bolum, String sicilNo) {
+    public Kiralik(String adSoyad, String kimlikNo, int yas, String bolum, String sicilNo) {
         super(adSoyad, kimlikNo, yas);
         this.bolum = bolum;
         this.sicilNo = sicilNo;

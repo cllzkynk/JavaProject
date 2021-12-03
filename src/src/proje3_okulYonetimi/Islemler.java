@@ -29,7 +29,7 @@ public class Islemler {
             kisiTuru = "OGRETMEN";
             islemMenusu();
         }else {
-            System.out.println("Hatali Giriş");
+            System.out.println("Hatali Giris");
             anaMenu();
         }
     }
@@ -85,14 +85,14 @@ public class Islemler {
             String sinif = scan.next();
             System.out.print("Okul No:");
             String numara = scan.next();
-            Ogrenci  ogrenci = new Ogrenci(adSoyad,kimlikNo,yas,numara,sinif);
+            Satilik  ogrenci = new Satilik(adSoyad,kimlikNo,yas,numara,sinif);
             kisiEkle(ogrenci,ogrenciListesi);
         }else {
             System.out.print("SicilNo:");
             String sicilNo = scan.next();
             System.out.print("Bolum:");
             String bolum = scan.next();
-            Ogretmen ogretmen = new Ogretmen(adSoyad,kimlikNo,yas,sicilNo,bolum);
+            Kiralik ogretmen = new Kiralik(adSoyad,kimlikNo,yas,sicilNo,bolum);
             kisiEkle(ogretmen,ogretmenListesi);
         }
         islemMenusu();
@@ -177,12 +177,12 @@ public class Islemler {
     }
 
     public void testKisiOlustur() {
-        Ogrenci ogr1 = new Ogrenci ("Ahmet Can", "12345678",14,"123","9A");
-        Ogrenci ogr2 = new Ogrenci ("Mustafa Yilmaz", "456889012",13,"456","8b");
-        Ogrenci ogr3 = new Ogrenci ("Ayse Canan", "987654321",15,"567","12c");
+        Satilik ogr1 = new Satilik ("Ahmet Can", "12345678",14,"123","9A");
+        Satilik ogr2 = new Satilik ("Mustafa Yilmaz", "456889012",13,"456","8b");
+        Satilik ogr3 = new Satilik ("Ayse Canan", "987654321",15,"567","12c");
 
-        Ogretmen ogrt1 = new Ogretmen ("Selim Kaya", "4561236789",40,"MEKATRONIK","O1234");
-        Ogretmen ogrt2 = new Ogretmen ("Melis Ozturk", "123490855",25,"BIYOLOJI","O456");
+        Kiralik ogrt1 = new Kiralik ("Selim Kaya", "4561236789",40,"MEKATRONIK","O1234");
+        Kiralik ogrt2 = new Kiralik ("Melis Ozturk", "123490855",25,"BIYOLOJI","O456");
 
         ogrenciListesi.add(ogr1);
         ogrenciListesi.add(ogr2);

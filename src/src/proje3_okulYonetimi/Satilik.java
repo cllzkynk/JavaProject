@@ -1,10 +1,10 @@
 package src.proje3_okulYonetimi;
 
-public class Ogrenci extends Kisi{
+public class Satilik extends Kisi{
     private String numara;
     private String sinif;
 
-    public Ogrenci(String adSoyad, String kimlikNo, int yas, String numara, String sinif) {
+    public Satilik(String adSoyad, String kimlikNo, int yas, String numara, String sinif) {
         super(adSoyad, kimlikNo, yas);
         this.numara = numara;
         this.sinif = sinif;
