@@ -85,7 +85,7 @@ public class Islemler {
             String sinif = scan.next();
             System.out.print("Okul No:");
             String numara = scan.next();
-            Satilik  ogrenci = new Satilik(adSoyad,kimlikNo,yas,numara,sinif);
+            Ogrenci  ogrenci = new Ogrenci(adSoyad,kimlikNo,yas,numara,sinif);
             kisiEkle(ogrenci,ogrenciListesi);
         }else {
             System.out.print("SicilNo:");
@@ -165,21 +165,23 @@ public class Islemler {
         System.out.println(kisi.getAdSoyad() + " Sisteme Eklenmistir.");
     }
 
-    private void kimlikNoIleKisiAra (String kimlikNo, List<Kisi> liste) {
+    public String kimlikNoIleKisiAra (String kimlikNo, List<Kisi> liste) {
 
-        for(Kisi w : liste) {
-            if(w.getKimlikNo().equals(kimlikNo)) {
-                System.out.println(w);
-                return;
-            }
-        }
-        System.out.println("Aradiginiz kisi bulunamamistir.");
-    }
+       for (int i = 0; i < liste.size(); i++) {
+    	  
+               if(liste.get(i).getKimlikNo().equals(kimlikNo)) {
+                  
+                   return liste.get(i).getAdSoyad();
+               
+           }
+	}
+         
+  return   "Aradiginiz kisi bulunamamistir." ;  }
 
     public void testKisiOlustur() {
-        Satilik ogr1 = new Satilik ("Ahmet Can", "12345678",14,"123","9A");
-        Satilik ogr2 = new Satilik ("Mustafa Yilmaz", "456889012",13,"456","8b");
-        Satilik ogr3 = new Satilik ("Ayse Canan", "987654321",15,"567","12c");
+    	Ogrenci ogr1 = new Ogrenci ("Ahmet Can", "12345678",14,"123","9A");
+    	Ogrenci ogr2 = new Ogrenci ("Mustafa Yilmaz", "456889012",13,"456","8b");
+    	Ogrenci ogr3 = new Ogrenci ("Ayse Canan", "987654321",15,"567","12c");
 
         Kiralik ogrt1 = new Kiralik ("Selim Kaya", "4561236789",40,"MEKATRONIK","O1234");
         Kiralik ogrt2 = new Kiralik ("Melis Ozturk", "123490855",25,"BIYOLOJI","O456");

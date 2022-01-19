@@ -5,6 +5,7 @@ public class Kisi {
     private String adSoyad;
     private String kimlikNo;
     private int yas;
+	public boolean getKimlikNo;
 
     public Kisi() {
     }
